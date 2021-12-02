@@ -41,10 +41,6 @@ spring:
   url:
     base: http://localhost:65000
 
-  freemarker:
-    template-loader-path: classpath:/templates
-    suffix: .ftl
-
   servlet:
     multipart:
       maxFileSize: 10MB
