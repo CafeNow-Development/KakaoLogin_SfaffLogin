@@ -1,0 +1,77 @@
+server:
+  port: 65001
+
+spring:
+  jwt:
+    secret: gwooleldisangyun!!daf8fas89df899889sd89f98sdf89s9d8f9dsf98
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true
+  datasource:
+    url: jdbc:h2:mem:skanow_user
+    driver-class-name: org.h2.Driver
+    username: sa
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties.hibernate.hbm2ddl.auto: update
+    showSql: true
+    properties:
+      hibernate:
+      default_batch_fetch_size: 1000
+  #  output:
+  #    ansi:
+  #      enabled: always
+  messages:
+    basename: i18n/exception
+    encoding: UTF-8
+  social:
+    kakao:
+      grant_type: authorization_code
+      client_secret: uPfIMw8cVJHPMbiKypK019M1IWOLvKok
+      client_id: 475eeac2ef5afa6af598830e6720ecc6 # 앱생성시 받은 REST API 키
+      redirect: /social/login/kakao
+      url:
+        login: https://kauth.kakao.com/oauth/authorize
+        token: https://kauth.kakao.com/oauth/token
+        profile: https://kapi.kakao.com/v2/user/me
+        message: https://kapi.kakao.com/v2/api/talk/memo/default/send
+  url:
+    base: http://localhost:65000
+
+  freemarker:
+    template-loader-path: classpath:/templates
+    suffix: .ftl
+
+  servlet:
+    multipart:
+      maxFileSize: 10MB
+      maxRequestSize: 20MB
+
+develop:
+  token: cafenow
+
+cloud:
+  aws:
+    credentials:
+      accessKey: AKIARMCDCC23VTPJBDUR
+      secretKey: 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
+    s3:
+      bucket: cafenow
+    region:
+      static: ap-northeast-2
+    stack:
+      auto: false
+
+logging:
+  level:
+    com:
+      amazonaws:
+        util:
+          EC2MetadataUtils: error
+#    org:
+#      hibernate:
+#        type:
+#          trace
