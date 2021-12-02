@@ -18,5 +18,4 @@ public class DataNotFoundException extends RuntimeException {
         super(dataType.getMessage());
     }
 
-
 }
