@@ -1,7 +1,6 @@
 package com.login.cafenow_kakaologin_stafflogin.domain.kakao_login.dto;
 
 import com.login.cafenow_kakaologin_stafflogin.domain.kakao_login.model.Admin;
-import com.login.cafenow_kakaologin_stafflogin.domain.kakao_login.model.enumType.AdminRole;
 import com.login.cafenow_kakaologin_stafflogin.domain.kakao_login.model.enumType.AdminRoleType;
 import lombok.AllArgsConstructor;
 import lombok.Data;

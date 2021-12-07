@@ -3,7 +3,6 @@ package com.login.cafenow_kakaologin_stafflogin.domain.kakao_login.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.login.cafenow_kakaologin_stafflogin.common.model.AbstractEntity;
 import com.login.cafenow_kakaologin_stafflogin.domain.kakao_login.model.enumType.AdminRoleType;
-import com.login.cafenow_kakaologin_stafflogin.domain.kakao_login.model.enumType.UserRole;
 import com.login.cafenow_kakaologin_stafflogin.domain.staff.model.Staff;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

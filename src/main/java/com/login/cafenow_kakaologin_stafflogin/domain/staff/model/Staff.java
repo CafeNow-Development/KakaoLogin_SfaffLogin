@@ -3,7 +3,7 @@ package com.login.cafenow_kakaologin_stafflogin.domain.staff.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.login.cafenow_kakaologin_stafflogin.common.model.AbstractEntity;
 import com.login.cafenow_kakaologin_stafflogin.domain.kakao_login.model.Admin;
-import com.login.cafenow_kakaologin_stafflogin.domain.kakao_login.model.enumType.UserRole;
+import com.login.cafenow_kakaologin_stafflogin.domain.kakao_login.model.enumType.AdminRoleType;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -62,7 +62,7 @@ public class Staff extends AbstractEntity implements UserDetails {
     @ElementCollection(fetch = EAGER)
     @CollectionTable(name = "role_staff", joinColumns = @JoinColumn(name = "staff_id"))
     @Builder.Default
-    private List<UserRole> roles = new ArrayList<>();
+    private List<AdminRoleType> roles = new ArrayList<>();
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @Override
