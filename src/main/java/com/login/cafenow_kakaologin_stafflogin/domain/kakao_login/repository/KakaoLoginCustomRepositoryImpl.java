@@ -21,4 +21,11 @@ public class KakaoLoginCustomRepositoryImpl implements KakaoLoginCustomRepositor
                         .fetchOne()
         );
     }
+
+    @Override
+    public Admin findByEmailAndProvider(String email, String provider) {
+        return queryFactory.selectFrom(admin)
+                .where(admin.provider.eq(provider).and(admin.email.eq(email)))
+                .fetchOne();
+    }
 }

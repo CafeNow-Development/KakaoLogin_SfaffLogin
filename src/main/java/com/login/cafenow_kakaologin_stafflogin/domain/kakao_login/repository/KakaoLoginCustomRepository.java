@@ -6,4 +6,6 @@ import java.util.Optional;
 
 public interface KakaoLoginCustomRepository {
     public Optional<Admin> findByAdminEmail(String email);
+
+    Admin findByEmailAndProvider(String email, String provider);
 }

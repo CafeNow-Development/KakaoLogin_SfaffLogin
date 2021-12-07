@@ -1,9 +1,10 @@
-package com.login.cafenow_kakaologin_stafflogin.common.exception;
+package com.login.cafenow_kakaologin_stafflogin.common.exception.datanotfound;
 
 public enum DataNotFoundType {
 
     DEFAULT("필수"),
-    회원_못찾음("회원을 찾을 수 없습니다.")
+    회원_못찾음("회원을 찾을 수 없습니다."),
+    스텝_못찾음("스텝을 찾을 수 없습니다.")
     ;
 
 

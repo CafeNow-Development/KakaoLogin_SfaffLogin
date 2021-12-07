@@ -1,7 +1,7 @@
 package com.login.cafenow_kakaologin_stafflogin.security.authectication;
 
-import com.login.cafenow_kakaologin_stafflogin.common.exception.DataNotFoundException;
-import com.login.cafenow_kakaologin_stafflogin.common.exception.DataNotFoundType;
+import com.login.cafenow_kakaologin_stafflogin.common.exception.datanotfound.DataNotFoundException;
+import com.login.cafenow_kakaologin_stafflogin.common.exception.datanotfound.DataNotFoundType;
 import com.login.cafenow_kakaologin_stafflogin.domain.kakao_login.repository.KakaoLoginRepository;
 import com.login.cafenow_kakaologin_stafflogin.domain.staff.repository.StaffRepository;
 import lombok.RequiredArgsConstructor;
@@ -23,6 +23,6 @@ public class MyUserDetails implements UserDetailsService {
     }
 
     public UserDetails CustomLoadUserByUsername(String username) throws UsernameNotFoundException {
-        return staffRepository.findByStaffEmail(username).orElseThrow(() -> new DataNotFoundException(DataNotFoundType.회원_못찾음));
+        return staffRepository.findByStaffEmail(username).orElseThrow(() -> new DataNotFoundException(DataNotFoundType.스텝_못찾음));
     }
 }

@@ -67,7 +67,3 @@ logging:
       amazonaws:
         util:
           EC2MetadataUtils: error
-#    org:
-#      hibernate:
-#        type:
-#          trace

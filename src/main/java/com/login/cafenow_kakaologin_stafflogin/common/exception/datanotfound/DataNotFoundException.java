@@ -1,4 +1,4 @@
-package com.login.cafenow_kakaologin_stafflogin.common.exception;
+package com.login.cafenow_kakaologin_stafflogin.common.exception.datanotfound;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
