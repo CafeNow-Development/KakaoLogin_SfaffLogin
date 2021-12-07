@@ -18,11 +18,11 @@ public class MyUserDetails implements UserDetailsService {
     private final StaffRepository staffRepository;
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return kakaoLoginRepository.findByAdminEmail(username).orElseThrow(() -> new DataNotFoundException(DataNotFoundType.회원_못찾음));
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        return kakaoLoginRepository.findByAdminEmail(email).orElseThrow(() -> new DataNotFoundException(DataNotFoundType.회원_못찾음));
     }
 
-    public UserDetails CustomLoadUserByUsername(String username) throws UsernameNotFoundException {
-        return staffRepository.findByStaffEmail(username).orElseThrow(() -> new DataNotFoundException(DataNotFoundType.스텝_못찾음));
+    public UserDetails CustomLoadUserByUsername(String email) throws UsernameNotFoundException {
+        return staffRepository.findByStaffEmail(email).orElseThrow(() -> new DataNotFoundException(DataNotFoundType.스텝_못찾음));
     }
 }
