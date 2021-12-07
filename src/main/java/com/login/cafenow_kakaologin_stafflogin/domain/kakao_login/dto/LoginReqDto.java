@@ -2,6 +2,7 @@ package com.login.cafenow_kakaologin_stafflogin.domain.kakao_login.dto;
 
 import com.login.cafenow_kakaologin_stafflogin.domain.kakao_login.model.Admin;
 import com.login.cafenow_kakaologin_stafflogin.domain.kakao_login.model.enumType.AdminRole;
+import com.login.cafenow_kakaologin_stafflogin.domain.kakao_login.model.enumType.AdminRoleType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,7 +23,7 @@ public class LoginReqDto {
                 .email(profile.getEmail())
                 .provider(provider)
                 .name(profile.getNickName())
-                .roles(Collections.singletonList(AdminRole.ROLE_ADMIN))
+                .roles(Collections.singletonList(AdminRoleType.ROLE_ADMIN))
                 .profile_image_url(profile.getProfile_image_url())
                 .thumbnail_image_url(profile.getThumbnail_image_url())
                 .is_email_valid(profile.getIs_email_valid())

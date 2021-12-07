@@ -2,6 +2,7 @@ package com.login.cafenow_kakaologin_stafflogin.domain.kakao_login.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.login.cafenow_kakaologin_stafflogin.common.model.AbstractEntity;
+import com.login.cafenow_kakaologin_stafflogin.domain.kakao_login.model.enumType.AdminRoleType;
 import com.login.cafenow_kakaologin_stafflogin.domain.kakao_login.model.enumType.UserRole;
 import com.login.cafenow_kakaologin_stafflogin.domain.staff.model.Staff;
 import lombok.AllArgsConstructor;
@@ -68,7 +69,7 @@ public class Admin extends AbstractEntity implements UserDetails{
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "role_admin", joinColumns = @JoinColumn(name = "adminIdx"))
     @Builder.Default
-    private List<UserRole> roles = new ArrayList<>();
+    private List<AdminRoleType> roles = new ArrayList<>();
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @Override
