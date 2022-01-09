@@ -28,7 +28,7 @@ public class StaffServiceImpl implements StaffService {
     @Override
     public void saveStaff(StaffSaveReqDto staffSaveReqDto) {
         Admin currentAdmin = currentAdminUtil.getCurrentAdmin();
-        // 카프카로 Store 큐를 사용해서 가져오기
+        // 카프카로 Store 큐를 사용해서
     }
 
     @Override

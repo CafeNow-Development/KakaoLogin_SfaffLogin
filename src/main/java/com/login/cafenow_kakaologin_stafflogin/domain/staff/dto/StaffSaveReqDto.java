@@ -1,8 +1,5 @@
 package com.login.cafenow_kakaologin_stafflogin.domain.staff.dto;
 
-import com.java.cafenow.kakao_login.domain.Admin;
-import com.java.cafenow.kakao_login.domain.enumType.Role;
-import com.java.cafenow.staff.domain.Staff;
 import com.login.cafenow_kakaologin_stafflogin.domain.kakao_login.model.Admin;
 import com.login.cafenow_kakaologin_stafflogin.domain.kakao_login.model.enumType.AdminRoleType;
 import com.login.cafenow_kakaologin_stafflogin.domain.staff.model.Staff;
